@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07DB0A5013225A8800629857 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A3913225A8800629857 /* Animation.m */; };
+		07DB0A5113225A8800629857 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A3B13225A8800629857 /* GameState.m */; };
+		07DB0A5213225A8800629857 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A3D13225A8800629857 /* GameStateManager.m */; };
+		07DB0A5313225A8800629857 /* GLESGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A3F13225A8800629857 /* GLESGameState.m */; };
+		07DB0A5413225A8800629857 /* GLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A4113225A8800629857 /* GLFont.m */; };
+		07DB0A5513225A8800629857 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A4313225A8800629857 /* GLTexture.m */; };
+		07DB0A5613225A8800629857 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A4513225A8800629857 /* ResourceManager.m */; };
+		07DB0A5713225A8800629857 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A4713225A8800629857 /* Singleton.m */; };
+		07DB0A5813225A8800629857 /* SoundEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A4813225A8800629857 /* SoundEngine.cpp */; };
+		07DB0A5913225A8800629857 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A4B13225A8800629857 /* Sprite.m */; };
+		07DB0A5A13225A8800629857 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A4D13225A8800629857 /* Timer.m */; };
+		07DB0A5B13225A8800629857 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A4F13225A8800629857 /* Vector.m */; };
+		07DB0A6E13225CF600629857 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A6D13225CF600629857 /* MainScene.m */; };
+		07DB0A8513225D6100629857 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DB0A8413225D6100629857 /* AudioToolbox.framework */; };
+		07DB0A8713225D6100629857 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DB0A8613225D6100629857 /* OpenAL.framework */; };
+		07DB0A8913225D6100629857 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DB0A8813225D6100629857 /* OpenGLES.framework */; };
+		07DB0A8B13225D6100629857 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DB0A8A13225D6100629857 /* QuartzCore.framework */; };
+		07DB0A8D13225D7500629857 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DB0A8C13225D7500629857 /* AudioToolbox.framework */; };
+		07DB0A8F13225D7500629857 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DB0A8E13225D7500629857 /* OpenAL.framework */; };
+		07DB0A9113225D7500629857 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DB0A9013225D7500629857 /* OpenGLES.framework */; };
+		07DB0A9313225D7500629857 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DB0A9213225D7500629857 /* QuartzCore.framework */; };
+		07DB0B99132260C200629857 /* MyChara.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0B98132260C200629857 /* MyChara.m */; };
+		07DB0B9D132260E700629857 /* Prefecture.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0B9C132260E700629857 /* Prefecture.m */; };
+		07DB0B9F1322629A00629857 /* prefectures.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07DB0B9E1322629A00629857 /* prefectures.plist */; };
+		1D3623260D0F684500981E51 /* UDONAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* UDONAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* UDONViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* UDONViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* UDONViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* UDONViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07DB0A3813225A8800629857 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		07DB0A3913225A8800629857 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
+		07DB0A3A13225A8800629857 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		07DB0A3B13225A8800629857 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
+		07DB0A3C13225A8800629857 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
+		07DB0A3D13225A8800629857 /* GameStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStateManager.m; sourceTree = "<group>"; };
+		07DB0A3E13225A8800629857 /* GLESGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESGameState.h; sourceTree = "<group>"; };
+		07DB0A3F13225A8800629857 /* GLESGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLESGameState.m; sourceTree = "<group>"; };
+		07DB0A4013225A8800629857 /* GLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFont.h; sourceTree = "<group>"; };
+		07DB0A4113225A8800629857 /* GLFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLFont.m; sourceTree = "<group>"; };
+		07DB0A4213225A8800629857 /* GLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTexture.h; sourceTree = "<group>"; };
+		07DB0A4313225A8800629857 /* GLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTexture.m; sourceTree = "<group>"; };
+		07DB0A4413225A8800629857 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
+		07DB0A4513225A8800629857 /* ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceManager.m; sourceTree = "<group>"; };
+		07DB0A4613225A8800629857 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		07DB0A4713225A8800629857 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		07DB0A4813225A8800629857 /* SoundEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundEngine.cpp; sourceTree = "<group>"; };
+		07DB0A4913225A8800629857 /* SoundEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEngine.h; sourceTree = "<group>"; };
+		07DB0A4A13225A8800629857 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		07DB0A4B13225A8800629857 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
+		07DB0A4C13225A8800629857 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		07DB0A4D13225A8800629857 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
+		07DB0A4E13225A8800629857 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		07DB0A4F13225A8800629857 /* Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
+		07DB0A6C13225CF600629857 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		07DB0A6D13225CF600629857 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		07DB0A8413225D6100629857 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		07DB0A8613225D6100629857 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		07DB0A8813225D6100629857 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		07DB0A8A13225D6100629857 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		07DB0A8C13225D7500629857 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		07DB0A8E13225D7500629857 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		07DB0A9013225D7500629857 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		07DB0A9213225D7500629857 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		07DB0B97132260C200629857 /* MyChara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyChara.h; sourceTree = "<group>"; };
+		07DB0B98132260C200629857 /* MyChara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyChara.m; sourceTree = "<group>"; };
+		07DB0B9B132260E700629857 /* Prefecture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefecture.h; sourceTree = "<group>"; };
+		07DB0B9C132260E700629857 /* Prefecture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prefecture.m; sourceTree = "<group>"; };
+		07DB0B9E1322629A00629857 /* prefectures.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = prefectures.plist; sourceTree = "<group>"; };
+		07DB0BA21322651000629857 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* UDONAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDONAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* UDONAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDONAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* UDON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* UDONViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UDONViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* UDONViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDONViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* UDONViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDONViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* UDON_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDON_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* UDON-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UDON-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				07DB0A8513225D6100629857 /* AudioToolbox.framework in Frameworks */,
+				07DB0A8713225D6100629857 /* OpenAL.framework in Frameworks */,
+				07DB0A8913225D6100629857 /* OpenGLES.framework in Frameworks */,
+				07DB0A8B13225D6100629857 /* QuartzCore.framework in Frameworks */,
+				07DB0A8D13225D7500629857 /* AudioToolbox.framework in Frameworks */,
+				07DB0A8F13225D7500629857 /* OpenAL.framework in Frameworks */,
+				07DB0A9113225D7500629857 /* OpenGLES.framework in Frameworks */,
+				07DB0A9313225D7500629857 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0713DF84132244EC00AEF360 /* GameFramework */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0A5C13225AB200629857 /* Mixer */,
+				07DB0A32132259F800629857 /* Scene */,
+				07DB0A31132259F300629857 /* Sprite */,
+				07DB0A30132259E600629857 /* Utils */,
+				07DB0A2F132259D600629857 /* Resource */,
+			);
+			name = GameFramework;
+			sourceTree = "<group>";
+		};
+		07DB0A2F132259D600629857 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0A4413225A8800629857 /* ResourceManager.h */,
+				07DB0A4513225A8800629857 /* ResourceManager.m */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		07DB0A30132259E600629857 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0A4613225A8800629857 /* Singleton.h */,
+				07DB0A4713225A8800629857 /* Singleton.m */,
+				07DB0A4C13225A8800629857 /* Timer.h */,
+				07DB0A4D13225A8800629857 /* Timer.m */,
+				07DB0A4E13225A8800629857 /* Vector.h */,
+				07DB0A4F13225A8800629857 /* Vector.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		07DB0A31132259F300629857 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0A4A13225A8800629857 /* Sprite.h */,
+				07DB0A4B13225A8800629857 /* Sprite.m */,
+				07DB0A4013225A8800629857 /* GLFont.h */,
+				07DB0A4113225A8800629857 /* GLFont.m */,
+				07DB0A4213225A8800629857 /* GLTexture.h */,
+				07DB0A4313225A8800629857 /* GLTexture.m */,
+				07DB0A3813225A8800629857 /* Animation.h */,
+				07DB0A3913225A8800629857 /* Animation.m */,
+			);
+			name = Sprite;
+			sourceTree = "<group>";
+		};
+		07DB0A32132259F800629857 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0A3A13225A8800629857 /* GameState.h */,
+				07DB0A3B13225A8800629857 /* GameState.m */,
+				07DB0A3C13225A8800629857 /* GameStateManager.h */,
+				07DB0A3D13225A8800629857 /* GameStateManager.m */,
+				07DB0A3E13225A8800629857 /* GLESGameState.h */,
+				07DB0A3F13225A8800629857 /* GLESGameState.m */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		07DB0A5C13225AB200629857 /* Mixer */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0A4813225A8800629857 /* SoundEngine.cpp */,
+				07DB0A4913225A8800629857 /* SoundEngine.h */,
+			);
+			name = Mixer;
+			sourceTree = "<group>";
+		};
+		07DB0A6B13225CE500629857 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0A6C13225CF600629857 /* MainScene.h */,
+				07DB0A6D13225CF600629857 /* MainScene.m */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		07DB0B921322608900629857 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0B97132260C200629857 /* MyChara.h */,
+				07DB0B98132260C200629857 /* MyChara.m */,
+				07DB0B9B132260E700629857 /* Prefecture.h */,
+				07DB0B9C132260E700629857 /* Prefecture.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				07DB0B921322608900629857 /* Main */,
+				07DB0A6B13225CE500629857 /* Scene */,
+				1D3623240D0F684500981E51 /* UDONAppDelegate.h */,
+				1D3623250D0F684500981E51 /* UDONAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* UDONViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* UDONViewController.m */,
+				07DB0BA21322651000629857 /* Settings.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* UDON.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				0713DF84132244EC00AEF360 /* GameFramework */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* UDON_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E5210DE3E06400AC0155 /* UDONViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* UDON-Info.plist */,
+				07DB0B9E1322629A00629857 /* prefectures.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				07DB0A8C13225D7500629857 /* AudioToolbox.framework */,
+				07DB0A8E13225D7500629857 /* OpenAL.framework */,
+				07DB0A9013225D7500629857 /* OpenGLES.framework */,
+				07DB0A9213225D7500629857 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* UDON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "UDON" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UDON;
+			productName = UDON;
+			productReference = 1D6058910D05DD3D006BFB54 /* UDON.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "UDON" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* UDON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* UDONViewController.xib in Resources */,
+				07DB0B9F1322629A00629857 /* prefectures.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* UDONAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* UDONViewController.m in Sources */,
+				07DB0A5013225A8800629857 /* Animation.m in Sources */,
+				07DB0A5113225A8800629857 /* GameState.m in Sources */,
+				07DB0A5213225A8800629857 /* GameStateManager.m in Sources */,
+				07DB0A5313225A8800629857 /* GLESGameState.m in Sources */,
+				07DB0A5413225A8800629857 /* GLFont.m in Sources */,
+				07DB0A5513225A8800629857 /* GLTexture.m in Sources */,
+				07DB0A5613225A8800629857 /* ResourceManager.m in Sources */,
+				07DB0A5713225A8800629857 /* Singleton.m in Sources */,
+				07DB0A5813225A8800629857 /* SoundEngine.cpp in Sources */,
+				07DB0A5913225A8800629857 /* Sprite.m in Sources */,
+				07DB0A5A13225A8800629857 /* Timer.m in Sources */,
+				07DB0A5B13225A8800629857 /* Vector.m in Sources */,
+				07DB0A6E13225CF600629857 /* MainScene.m in Sources */,
+				07DB0B99132260C200629857 /* MyChara.m in Sources */,
+				07DB0B9D132260E700629857 /* Prefecture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = UDON_Prefix.pch;
+				INFOPLIST_FILE = "UDON-Info.plist";
+				PRODUCT_NAME = UDON;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = UDON_Prefix.pch;
+				INFOPLIST_FILE = "UDON-Info.plist";
+				PRODUCT_NAME = UDON;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "UDON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "UDON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
