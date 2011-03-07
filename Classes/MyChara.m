@@ -10,20 +10,43 @@
 
 
 @implementation MyChara
-@synthesize goal=_goal;
+@synthesize mogCount=_mogCount;
 
 - (id)init{
-	[super initWithTextureAndSize:@"mychara.png" :CGSizeMake(<#CGFloat width#>, <#CGFloat height#>)];
-	_mogCount = 0;
-	_mogMax = 5;
-	_x = 
+	[super initWithTextureAndSize:@"mychara.png" :CGSizeMake(MYCHARAWIDTH, MYCHARAHEIGHT)];
+	
+	_mogMax = MYCHARAMOGMAX;
+	_mogCount = _mogMax;
+	_x = MYCHARAINITIALX;
+	_y = MYCHARAINITIALY;
+	_speed = MYCHARAINITIALSPEED;
+	_goal = [[Vector alloc] initWithPoint:CGPointMake(MYCHARAINITIALX, MYCHARAINITIALY)];
+	self.index = 0;
 	return self;
 }
 
 - (void)update{
-	
+	Vector* currentPosition = [[[Vector alloc] initWithPoint:[self center]] autorelease];
+	_v = [[_goal clone] sub:currentPosition];
+	_v.x = 0;
+	[_v max:_speed];
+	[super update];
 }
 
-- (int)mogmog;
+- (BOOL)mogmog:(Prefecture*)target{
+	if(_mogCount > 0){
+		--_mogCount;
+		//あとでかく
+		return YES;
+	}
+	return NO;
+}
+
+- (void)setGoal:(CGPoint)point{
+	[_goal set:point];
+	float tmpx = _goal.x;
+	_goal.x = _goal.y;
+	_goal.y = 320 - tmpx;
+}
 
 @end

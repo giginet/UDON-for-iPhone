@@ -11,8 +11,7 @@
 #import "Vector.h"
 
 @interface Character : Animation {
-@private
-	Vector* v;
+	Vector* _v;
 }
-- (id)init;
+
 @end

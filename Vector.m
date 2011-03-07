@@ -26,16 +26,14 @@
 	return self;
 }
 
-- (Vector*)set:(CGFloat)vx:(CGFloat)vy{
-	_x = vx;
-	_y = vy;
+- (Vector*)set:(CGPoint)point{
+	_x = point.x;
+	_y = point.y;
 	return self;
 }
 
 - (Vector*)clone{
-	Vector* vec = [[Vector alloc] init];
-	[vec set:_x :_y];
-	return vec;
+	return [[Vector alloc] initWithPoint:CGPointMake(_x, _y)];
 }
 
 - (Vector*)add:(Vector *)v{
@@ -97,6 +95,20 @@
 - (Vector*)reverse{
 	_x *=-1;
 	_y *=-1;
+	return self;
+}
+
+- (Vector*)max:(CGFloat)max{
+	if([self length] > max){
+		[self resize:max]; 
+	}
+	return self;
+}
+
+- (Vector*)min:(CGFloat)min{
+	if([self length] < min){
+		[self resize:min]; 
+	}
 	return self;
 }
 @end

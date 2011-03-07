@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Animation.h"
+#import "Character.h"
 #import "Vector.h"
+#import "Settings.h"
 
-@interface Prefecture : Sprite {
+@interface Prefecture : Character {
 	int _number;
-	Vector* _v;
 }
+- (id)initWithNumber:(NSInteger)n;
 
 @end

@@ -11,7 +11,7 @@
 
 @implementation Sprite
 @synthesize alpha=_alpha, xscale=_xscale, yscale=_yscale, angle=_angle;
-@synthesize hit=_hit, area=_area, dest=_dest;
+@synthesize area=_area, dest=_dest;
 @synthesize x=_x, y=_y;
 
 - (id)initWithTexture:(NSString*)texture{
@@ -40,9 +40,14 @@
 										 withRotation:_angle];
 }
 
+- (CGRect)hitArea{
+	return CGRectMake(_x+_hit.origin.x, _y+_hit.origin.y, _hit.size.height, _hit.size.width);
+}
+
 - (BOOL)collideWithPoint:(CGPoint)point{
-	return _x <= point.x && point.x <= _x+_hit.size.width && 
-	_y <= point.y && point.y <= _y+_hit.size.height;
+	CGRect hit = [self hitArea];
+	return hit.origin.x <= point.x || point.x <= hit.origin.x+hit.size.width || 
+	hit.origin.y <= point.y || point.y <= _y+hit.size.height;
 }
 
 //あとでかく
@@ -56,7 +61,11 @@
 }
 
 - (CGPoint)center{
-	return CGPointMake(_x+_dest.size.width, _y+_dest.size.height);
+	return CGPointMake(_x+_dest.size.width/2, _y+_dest.size.height/2);
+}
+
+- (CGPoint)point{
+	return CGPointMake(_x, _y);
 }
 
 

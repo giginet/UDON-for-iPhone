@@ -15,7 +15,7 @@
 - (id)init;
 - (id)initWithPoint:(CGPoint)point;
 
-- (Vector*)set: (CGFloat)vx :(CGFloat)vy;
+- (Vector*)set:(CGPoint)point;
 - (Vector*)clone;
 - (Vector*)add:(Vector*)v;
 - (Vector*)sub:(Vector*)v;
@@ -28,4 +28,7 @@
 - (CGFloat)angle;
 - (Vector*)rotate:(CGFloat)deg;
 - (Vector*)reverse;
+
+- (Vector*)max:(CGFloat)max;
+- (Vector*)min:(CGFloat)min;
 @end

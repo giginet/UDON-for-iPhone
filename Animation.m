@@ -23,10 +23,11 @@
 	_flagEnable = YES;
 	_flagReverse = NO;
 	_flagLoop = YES;
-	self.dest = CGRectMake(self.x, self.y, size.width, size.height);
-	self.area = CGRectMake(_currentFrame*size.width, _index*size.height, 
+	self->_dest = CGRectMake(self->_x, self->_y, size.width, size.height);
+	self->_area = CGRectMake(_currentFrame*size.width, _index*size.height, 
 					   size.width, size.height);
-	self.hit = self.area;
+	self->_hit = CGRectMake(_currentFrame*size.width, _index*size.height, 
+					  size.width, size.height);
 	[_animationTimer play];
 	return self;
 }

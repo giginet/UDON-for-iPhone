@@ -1,5 +1,5 @@
 //
-//  MainScene.h
+//  Character.h
 //  UDON
 //
 //  Created by giginet on 11/03/05.
@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Animation.h"
+#import "Vector.h"
 
-#import "GLESGameState.h"
-#import "Stage.h"
-#import "Prefecture.h"
-
-@interface MainScene : GLESGameState {
-	Stage* _stage;
+@interface Character : Animation {
+@private
+	Vector* v;
 }
-
+- (id)init;
 @end

@@ -155,7 +155,6 @@ CGSize					_size;
 -(void) draw{
 	glClearColor(0x00/256.0f, 0x00/256.0f, 0x00/256.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
-	[self swapBuffers];
 }
 
 @end

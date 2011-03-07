@@ -10,12 +10,12 @@
 #import "GLTexture.h"
 
 @interface Sprite : NSObject {
-@protected	
+@protected
 	CGFloat _x, _y;
-	NSString* textureName;
 	CGFloat _alpha, _xscale, _yscale, _angle;
-	CGRect _hit;
-	CGRect _dest, _area;
+	CGRect _dest, _area, _hit;
+@private
+	NSString* textureName;
 }
 
 - (id)initWithTexture:(NSString*)texture;
@@ -23,16 +23,19 @@
 - (void)update;
 - (void)draw;
 
+- (CGRect)hitArea;
+
 - (BOOL)collideWithPoint:(CGPoint)point;
 - (BOOL)collideWithSprite:(Sprite*)sprite;
 - (BOOL)collideWithCircle:(CGPoint)center:(float)radius;
 
 - (CGPoint)center;
+- (CGPoint)point;
 
 - (float)bound:(NSString*)point;
 
 @property(readwrite) CGFloat alpha, xscale, yscale, angle;
-@property(readwrite) CGRect hit, area, dest;
+@property(readwrite) CGRect area, dest;
 @property(readwrite) CGFloat x,y;
 
 @end

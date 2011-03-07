@@ -7,19 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Animation.h"
+#import "Character.h"
 #import "Timer.h"
+#import "Settings.h"
+#import "Prefecture.h"
 
-@interface MyChara : Animation {
-	Vector* _v;
+@interface MyChara : Character {
 	Timer* _invincibleTimer;
 	int _mogMax, _mogCount;
 	float _speed;
-	CGPoint _goal;
+	Vector* _goal;
 }
 
-- (int)mogmog;
+- (BOOL)mogmog:(Prefecture*)target;
+- (void)setGoal:(CGPoint)point;
 
-@property(readwrite) CGPoint goal;
-
+@property(readwrite) int mogCount;
 @end
