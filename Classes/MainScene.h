@@ -11,6 +11,7 @@
 #import "GLESGameState.h"
 #import "Stage.h"
 #import "Prefecture.h"
+#import "Coordinate.h"
 
 @interface MainScene : GLESGameState {
 	Stage* _stage;

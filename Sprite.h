@@ -8,6 +8,7 @@
 
 #import "ResourceManager.h"
 #import "GLTexture.h"
+#include "Vector.h"
 
 @interface Sprite : NSObject {
 @protected
@@ -24,15 +25,18 @@
 - (void)draw;
 
 - (CGRect)hitArea;
+- (CGPoint)hitAreaCenter;
 
 - (BOOL)collideWithPoint:(CGPoint)point;
 - (BOOL)collideWithSprite:(Sprite*)sprite;
 - (BOOL)collideWithCircle:(CGPoint)center:(float)radius;
 
+- (float)distance:(Sprite*)sprite;
+
 - (CGPoint)center;
 - (CGPoint)point;
 
-- (float)bound:(NSString*)point;
+//- (float)bound:(NSString*)point;
 
 @property(readwrite) CGFloat alpha, xscale, yscale, angle;
 @property(readwrite) CGRect area, dest;

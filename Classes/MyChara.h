@@ -14,13 +14,15 @@
 
 @interface MyChara : Character {
 	Timer* _invincibleTimer;
-	int _mogMax, _mogCount;
+	int _mogCount;
 	float _speed;
+	int _hp;
 	Vector* _goal;
 }
 
 - (BOOL)mogmog:(Prefecture*)target;
 - (void)setGoal:(CGPoint)point;
+- (BOOL)damage:(Prefecture*)attacker;
 
 @property(readwrite) int mogCount;
 @end

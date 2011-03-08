@@ -13,8 +13,8 @@
 
 - (id)initWithNumber:(NSInteger)n{
 	_number = n;
-	[super initWithTextureAndSize:@"prefectures.png" 
-								 :CGSizeMake(PREFECTUREWIDTH, PREFECTUREHEIGHT)];
+	[super initWithTexture:@"prefectures.png" 
+				   andSize:CGSizeMake(PREFECTUREWIDTH, PREFECTUREHEIGHT)];
 	//[self stop];
 	int f = _number%7;
 	self.index = _number/7;

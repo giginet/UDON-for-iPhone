@@ -10,12 +10,9 @@
 
 
 @implementation MainScene
--(MainScene*) initWithFrame: (CGRect)frame andManager:(GameStateManager*)pManager{
-	if(self = [super initWithFrame:frame andManager:pManager]){
-		_stage = [[Stage alloc] init];
-	}
-	
-	return self;
+
+- (void)ready{
+	_stage = [[Stage alloc] init];
 }
 
 - (void)update{
@@ -31,10 +28,11 @@
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event{
 	for (UITouch *touch in touches) {
 		CGPoint clickPos = [touch locationInView:self];
+		clickPos = [Coordinate toLeftBottom:clickPos];
 		if(![_stage mogCheck:clickPos]){
 			[_stage.mychara setGoal:clickPos];
+			break;
 		}
-		break;
 	}
 }
 

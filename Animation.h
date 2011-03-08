@@ -18,7 +18,7 @@
 	BOOL _flagEnable, _flagReverse, _flagLoop;
 }
 
-- (id)initWithTextureAndSize:(NSString*)texture:(CGSize)size;
+- (id)initWithTexture:(NSString*)texture andSize:(CGSize)size;
 
 - (void)setAnimationPerFrame:(int)apf;
 

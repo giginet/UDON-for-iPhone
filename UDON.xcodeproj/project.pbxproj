@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070EFB5B1326B1820005F73D /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 070EFB5A1326B1820005F73D /* Coordinate.m */; };
+		070EFBC11326B6B50005F73D /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 070EFBC01326B6B50005F73D /* TitleScene.m */; };
+		070EFBC41326B6C30005F73D /* ResultScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 070EFBC31326B6C30005F73D /* ResultScene.m */; };
+		070EFBC71326B7B60005F73D /* ed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070EFBC51326B7B60005F73D /* ed.jpg */; };
+		070EFBC81326B7B60005F73D /* op.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070EFBC61326B7B60005F73D /* op.jpg */; };
 		07DB0A5013225A8800629857 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A3913225A8800629857 /* Animation.m */; };
 		07DB0A5113225A8800629857 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A3B13225A8800629857 /* GameState.m */; };
 		07DB0A5213225A8800629857 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB0A3D13225A8800629857 /* GameStateManager.m */; };
@@ -42,6 +47,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070EFB591326B1820005F73D /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
+		070EFB5A1326B1820005F73D /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		070EFBBF1326B6B50005F73D /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
+		070EFBC01326B6B50005F73D /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
+		070EFBC21326B6C30005F73D /* ResultScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultScene.h; sourceTree = "<group>"; };
+		070EFBC31326B6C30005F73D /* ResultScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultScene.m; sourceTree = "<group>"; };
+		070EFBC51326B7B60005F73D /* ed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ed.jpg; sourceTree = "<group>"; };
+		070EFBC61326B7B60005F73D /* op.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op.jpg; sourceTree = "<group>"; };
 		07DB0A3813225A8800629857 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		07DB0A3913225A8800629857 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
 		07DB0A3A13225A8800629857 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
@@ -147,6 +160,8 @@
 				07DB0A4D13225A8800629857 /* Timer.m */,
 				07DB0A4E13225A8800629857 /* Vector.h */,
 				07DB0A4F13225A8800629857 /* Vector.m */,
+				070EFB591326B1820005F73D /* Coordinate.h */,
+				070EFB5A1326B1820005F73D /* Coordinate.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -193,6 +208,10 @@
 			children = (
 				07DB0A6C13225CF600629857 /* MainScene.h */,
 				07DB0A6D13225CF600629857 /* MainScene.m */,
+				070EFBBF1326B6B50005F73D /* TitleScene.h */,
+				070EFBC01326B6B50005F73D /* TitleScene.m */,
+				070EFBC21326B6C30005F73D /* ResultScene.h */,
+				070EFBC31326B6C30005F73D /* ResultScene.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -259,6 +278,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				070EFBC51326B7B60005F73D /* ed.jpg */,
+				070EFBC61326B7B60005F73D /* op.jpg */,
 				07DB0BA61322866100629857 /* mychara.png */,
 				07DB0BA71322866100629857 /* prefectures.png */,
 				2899E5210DE3E06400AC0155 /* UDONViewController.xib */,
@@ -337,6 +358,8 @@
 				07DB0B9F1322629A00629857 /* prefectures.plist in Resources */,
 				07DB0BA81322866100629857 /* mychara.png in Resources */,
 				07DB0BA91322866100629857 /* prefectures.png in Resources */,
+				070EFBC71326B7B60005F73D /* ed.jpg in Resources */,
+				070EFBC81326B7B60005F73D /* op.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +390,9 @@
 				07DB0B9D132260E700629857 /* Prefecture.m in Sources */,
 				07DB0BA51322674200629857 /* Character.m in Sources */,
 				07DB0E791322A27400629857 /* Stage.m in Sources */,
+				070EFB5B1326B1820005F73D /* Coordinate.m in Sources */,
+				070EFBC11326B6B50005F73D /* TitleScene.m in Sources */,
+				070EFBC41326B6C30005F73D /* ResultScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,10 +16,13 @@
 	MyChara* _manbe;
 	NSMutableArray* _enemies;
 }
+- (void)update;
+- (void)draw;
+
 - (void)popEnemy;
 - (void)killEnemy:(Prefecture*)enemy;
-- (void)mogEnemy:(Prefecture*)enemy;
-- (Prefecture*)mogCheck:(CGPoint)point;
+- (BOOL)mogEnemy:(Prefecture*)enemy;
+- (BOOL)mogCheck:(CGPoint)point;
 
 @property(readonly) MyChara* mychara;
 @end

@@ -11,9 +11,9 @@
 
 @implementation Character
 
-- (id)initWithTextureAndSize:(NSString *)texture :(CGSize)size{
+- (id)initWithTexture:(NSString *)texture andSize:(CGSize)size{
 	_v = [[Vector alloc] init];
-	return [super initWithTextureAndSize:texture :size];
+	return [super initWithTexture:texture andSize:size];
 }
 
 - (void)update{

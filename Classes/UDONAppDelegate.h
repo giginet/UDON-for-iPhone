@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "MainScene.h"
+#include "TitleScene.h"
 #include "GameStateManager.h"
 #include "ResourceManager.h"
 

@@ -13,7 +13,7 @@
 @synthesize reverse=_flagReverse, looping=_flagLooping, isActive=_flagEnable;
 @synthesize maxFrame=_maxFrame, currentFrame=_currentFrame, index=_index;
 
-- (id)initWithTextureAndSize:(NSString *)texture :(CGSize)size{
+- (id)initWithTexture:(NSString *)texture andSize:(CGSize)size{
 	[super initWithTexture:texture];
 	_size = size;
 	_index = 0;
@@ -26,7 +26,7 @@
 	self->_dest = CGRectMake(self->_x, self->_y, size.width, size.height);
 	self->_area = CGRectMake(_currentFrame*size.width, _index*size.height, 
 					   size.width, size.height);
-	self->_hit = CGRectMake(_currentFrame*size.width, _index*size.height, 
+	self->_hit = CGRectMake(0, 0, 
 					  size.width, size.height);
 	[_animationTimer play];
 	return self;

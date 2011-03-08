@@ -19,8 +19,8 @@
 	textureName = texture;
 	GLTexture* image = [g_ResManager getTexture:texture];
 	_dest = CGRectMake(_x, _y, image.width, image.height);
-	_area = _dest;
-	_hit = _dest;
+	_area = CGRectMake(0, 0, image.width, image.height);
+	_hit = CGRectMake(0, 0, image.width, image.height);
 	return self;
 }
 
@@ -41,23 +41,37 @@
 }
 
 - (CGRect)hitArea{
-	return CGRectMake(_x+_hit.origin.x, _y+_hit.origin.y, _hit.size.height, _hit.size.width);
+	return CGRectMake(_x+_hit.origin.x, _y+_hit.origin.y, _hit.size.width, _hit.size.height);
+}
+
+- (CGPoint)hitAreaCenter{
+	return CGPointMake(_x+_hit.origin.x+_hit.size.width/2, _y+_hit.origin.y+_hit.size.height/2);
 }
 
 - (BOOL)collideWithPoint:(CGPoint)point{
 	CGRect hit = [self hitArea];
-	return hit.origin.x <= point.x || point.x <= hit.origin.x+hit.size.width || 
-	hit.origin.y <= point.y || point.y <= _y+hit.size.height;
+	return hit.origin.x <= point.x && point.x <= hit.origin.x+hit.size.width && 
+	hit.origin.y <= point.y && point.y <= hit.origin.y+hit.size.height;
 }
 
-//あとでかく
 - (BOOL)collideWithSprite:(Sprite*)sprite{
-	return NO;
+	CGRect recta = [self hitArea];
+	CGRect rectb = [sprite hitArea];
+	CGPoint centera = [self hitAreaCenter];
+	CGPoint centerb = [sprite hitAreaCenter];
+	return (abs(centera.x - centerb.x) < (recta.size.width + rectb.size.width)/2) &&
+	(abs(centera.y - centerb.y) < (recta.size.height + rectb.size.height)/2);
 }
 
 //あとでかく
 - (BOOL)collideWithCircle:(CGPoint)center:(float)radius{
 	return NO;
+}
+
+- (float)distance:(Sprite*)sprite{
+	float distance = [[[[[Vector alloc] initWithPoint:self.hitAreaCenter] autorelease] 
+	  sub:[[[Vector alloc] initWithPoint:sprite.hitAreaCenter] autorelease]] length];
+	return distance;
 }
 
 - (CGPoint)center{

@@ -27,7 +27,7 @@
 									repeats:NO];
 	//リファレンス確認
 	//Framerateをハードコーディングして大丈夫か？
-	[self doStateChange: [MainScene class]];
+	[self doStateChange: [TitleScene class]];
 }
 
 - (void) gameLoop:(id) sender {

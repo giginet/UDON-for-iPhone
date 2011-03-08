@@ -28,6 +28,9 @@
 		[enemy update];
 		if(enemy.x < - PREFECTUREWIDTH){
 			[killList addObject:enemy];
+		}else if([_manbe collideWithSprite:enemy]){
+			[_manbe damage:enemy];
+			[killList addObject:enemy];
 		}
 	}
 	for (Prefecture* enemy in killList){
@@ -53,24 +56,26 @@
 	[_enemies removeObject:enemy];
 }
 
-- (void)mogEnemy:(Prefecture*)enemy{
-	float distance = [[[[[Vector alloc] initWithPoint:enemy.point] autorelease] 
-					  sub:[[[Vector alloc] initWithPoint:_manbe.point] autorelease]] length];
+- (BOOL)mogEnemy:(Prefecture*)enemy{
+	float distance = [_manbe distance:enemy];
 	if(distance < MOGAREARADIUS){
 		if([_manbe mogmog:enemy]){
 			[self killEnemy:enemy];
+			return YES;
 		}
 	}
+	return NO;
 }
 
-- (Prefecture*)mogCheck:(CGPoint)point{
+- (BOOL)mogCheck:(CGPoint)point{
 	for(Prefecture* enemy in _enemies){
 		if([enemy collideWithPoint:point]){
+			NSLog(@"hit");
 			[self mogEnemy:enemy];
-			return enemy;
+			return YES;
 		}
 	}
-	return 0;
+	return NO;
 }
 
 @end

@@ -9,13 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "GameStateManager.h"
 #import <UIKit/UIView.h>
+#import "Sprite.h"
 
 
 @interface GameState : UIView {
-	GameStateManager* m_pManager;	
+	GameStateManager* _manager;
+	NSMutableArray* _sprites;
 }
 - (id) initWithFrame:(CGRect)frame andManager:(GameStateManager*)pManager;
 - (void) draw;
 - (void) update;
+
+- (void) ready;
+- (void) finalize;
+
+@property NSMutableArray* sprites;
 
 @end

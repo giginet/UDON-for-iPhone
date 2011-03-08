@@ -13,10 +13,9 @@
 @synthesize mogCount=_mogCount;
 
 - (id)init{
-	[super initWithTextureAndSize:@"mychara.png" :CGSizeMake(MYCHARAWIDTH, MYCHARAHEIGHT)];
-	
-	_mogMax = MYCHARAMOGMAX;
-	_mogCount = _mogMax;
+	[super initWithTexture:@"mychara.png" andSize:CGSizeMake(MYCHARAWIDTH, MYCHARAHEIGHT)];
+	_hp = MYCHARAINITIALHP;
+	_mogCount = MYCHARAMOGMAX;
 	_x = MYCHARAINITIALX;
 	_y = MYCHARAINITIALY;
 	_speed = MYCHARAINITIALSPEED;
@@ -37,6 +36,7 @@
 	if(_mogCount > 0){
 		--_mogCount;
 		//あとでかく
+		_speed = MYCHARAINITIALSPEED * pow(0.8, (MYCHARAMOGMAX-_mogCount));
 		return YES;
 	}
 	return NO;
@@ -44,9 +44,15 @@
 
 - (void)setGoal:(CGPoint)point{
 	[_goal set:point];
-	float tmpx = _goal.x;
-	_goal.x = _goal.y;
-	_goal.y = 320 - tmpx;
+}
+
+- (BOOL)damage:(Prefecture*)attacker{
+	--_hp;
+	if(_hp > 0){
+		//無敵処理とか
+		return NO;
+	}
+	return YES;
 }
 
 @end
