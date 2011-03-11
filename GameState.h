@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GameStateManager.h"
+#import "ResourceManager.h"
 #import <UIKit/UIView.h>
 #import "Sprite.h"
 
@@ -21,8 +22,8 @@
 - (void) update;
 
 - (void) ready;
-- (void) finalize;
+- (void) clean;
 
-@property NSMutableArray* sprites;
+//@property NSMutableArray* sprites;
 
 @end

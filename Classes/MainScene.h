@@ -10,11 +10,22 @@
 
 #import "GLESGameState.h"
 #import "Stage.h"
+#import "Sprite.h"
 #import "Prefecture.h"
 #import "Coordinate.h"
+#import "ResultScene.h"
+#import "ResourceManager.h"
+#import "Sound.h"
+
+extern int gScore;
 
 @interface MainScene : GLESGameState {
+@private
 	Stage* _stage;
+	Sprite* _bg1;
+	Sprite* _bg2;
+	int _score;
+	int _scroll;
 }
 
 @end

@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "GLESGameState.h"
+#import "Sprite.h"
+#import "MainScene.h"
+#import "Coordinate.h"
+#import "Number.h"
 
 @interface ResultScene : GLESGameState {
-
+	Sprite* _resultImage;
+	Number* _score;
 }
 
 @end
+

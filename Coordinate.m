@@ -18,7 +18,19 @@
 }
 
 + (CGPoint)toRightBottom:(CGPoint)point{
-	return point;
+	int height = [[UIScreen mainScreen] applicationFrame].size.height;
+	CGPoint conv = CGPointMake(height-point.y,point.x);
+	return conv;
 }
 
-@end
++ (CGPoint)fromLeftBottom:(CGPoint)point{
+	int width = [[UIScreen mainScreen] applicationFrame].size.width;
+	CGPoint conv = CGPointMake(width - point.y, point.x);
+	return conv;
+}
+
++ (CGPoint)fromRightBottom:(CGPoint)point{
+	int height = [[UIScreen mainScreen] applicationFrame].size.height;
+	CGPoint conv = CGPointMake(point.y, height-point.x);
+	return conv;
+}@end

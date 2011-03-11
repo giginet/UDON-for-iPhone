@@ -13,25 +13,20 @@
 
 - (id)initWithTexture:(NSString *)texture andSize:(CGSize)size{
 	_v = [[Vector alloc] init];
-	return [super initWithTexture:texture andSize:size];
+	[super initWithTexture:texture andSize:size];
+	[self changeDirection:@"left"];
+	return self;
 }
 
 - (void)update{
 	_x += _v.x;
 	_y += _v.y;
+	[super update];
 }
 
-- (void)draw{
-	//座標変換する
-	int width = [[UIScreen mainScreen] applicationFrame].size.width;
-	CGFloat tmpx = _x, tmpy = _y, tmpa = _angle;
-	_x = width - _y - _dest.size.width;
-	_y = tmpx;
-	_angle = tmpa + 270;
-	[super draw];
-	_x = tmpx;
-	_y = tmpy;
-	_angle = tmpa;
+- (void)dealloc{
+	[_v release];
+	[super dealloc];
 }
 
 @end

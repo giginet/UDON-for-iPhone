@@ -13,6 +13,8 @@
 
 - (void)ready{
 	_titleImage = [[Sprite alloc] initWithTexture:(NSString *)@"op.jpg"];
+	[_titleImage changeDirection:@"left"];
+	[g_ResManager playMusic:@"op.mp3"];
 }
 
 - (void)draw{
@@ -23,6 +25,8 @@
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event{
 	for (UITouch *touch in touches) {
+		[_titleImage release];
+		[super clean];
 		[_manager doStateChange:[MainScene class]];
 		break;
 	}

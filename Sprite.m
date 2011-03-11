@@ -21,6 +21,7 @@
 	_dest = CGRectMake(_x, _y, image.width, image.height);
 	_area = CGRectMake(0, 0, image.width, image.height);
 	_hit = CGRectMake(0, 0, image.width, image.height);
+	_direction = 0;
 	return self;
 }
 
@@ -28,16 +29,35 @@
 }
 
 - (void)draw{
+	float a = _angle;
+	float cx = _x;
+	float cy = _y;
+	//スクリーンの向きが違っていた場合は補正
+	if(_direction == 1){
+		CGPoint p = [Coordinate fromLeftBottom:CGPointMake(_x, _y)];
+		//座標変換する
+		CGPoint newCenter = CGPointMake(p.x+_dest.size.width/2, p.y+_dest.size.height/2);
+		CGPoint trueCenter = CGPointMake(p.x-_dest.size.height/2, p.y+_dest.size.width/2);
+		cx = p.x + trueCenter.x - newCenter.x;
+		cy = p.y + trueCenter.y - newCenter.y;
+		a += _angle+270;
+	}else if(_direction == 2){
+		CGPoint p = [Coordinate toRightBottom:CGPointMake(_x, _y)];
+		cx = p.x;
+		cy = p.y;
+		a += _angle+90;
+	}
+	
 	//座標を左上0,0に補正する。
-	_dest.origin.x = _x;
-	_dest.origin.y = _y;
+	_dest.origin.x = cx;
+	_dest.origin.y = cy;
 	CGRect screen = [[UIScreen mainScreen] applicationFrame];
 	CGRect dest = CGRectMake(_dest.origin.x, 
 							 screen.size.height - _dest.origin.y - _area.size.height,
 							 _area.size.width, _area.size.height);
 	[[g_ResManager getTexture:textureName] drawInRect:dest
 											 withClip:_area 
-										 withRotation:_angle];
+										 withRotation:a];
 }
 
 - (CGRect)hitArea{
@@ -80,6 +100,16 @@
 
 - (CGPoint)point{
 	return CGPointMake(_x, _y);
+}
+
+- (void)changeDirection:(NSString*)direction{
+	if([direction isEqualToString:@"bottom"]){
+		_direction = 0;
+	}else if([direction isEqualToString:@"left"]){
+		_direction = 1;
+	}else if([direction isEqualToString:@"right"]){
+		_direction = 2;
+	}
 }
 
 

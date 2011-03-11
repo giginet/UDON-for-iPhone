@@ -11,6 +11,7 @@
 #import "Timer.h"
 #import "Settings.h"
 #import "Prefecture.h"
+#import "ResourceManager.h"
 
 @interface MyChara : Character {
 	Timer* _invincibleTimer;
@@ -24,5 +25,6 @@
 - (void)setGoal:(CGPoint)point;
 - (BOOL)damage:(Prefecture*)attacker;
 
-@property(readwrite) int mogCount;
+@property(readonly) int mogCount;
+@property(readonly) int hp;
 @end

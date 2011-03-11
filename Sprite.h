@@ -9,6 +9,7 @@
 #import "ResourceManager.h"
 #import "GLTexture.h"
 #include "Vector.h"
+#include "Coordinate.h"
 
 @interface Sprite : NSObject {
 @protected
@@ -17,6 +18,7 @@
 	CGRect _dest, _area, _hit;
 @private
 	NSString* textureName;
+	int _direction; //0下1左が下2右が下
 }
 
 - (id)initWithTexture:(NSString*)texture;
@@ -36,6 +38,7 @@
 - (CGPoint)center;
 - (CGPoint)point;
 
+- (void)changeDirection:(NSString*)direction;
 //- (float)bound:(NSString*)point;
 
 @property(readwrite) CGFloat alpha, xscale, yscale, angle;

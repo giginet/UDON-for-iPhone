@@ -19,6 +19,7 @@ EAGLContext* gles_context;
 GLuint					gles_framebuffer;
 GLuint					gles_renderbuffer;
 CGSize					_size;
+float _fFactor;
 
 @implementation GLESGameState
 
@@ -32,7 +33,18 @@ CGSize					_size;
         // Initialization code
 		[self bindLayer];
     }
-    return self;
+	if([GameStateManager isPad]){
+		_fFactor = MAGNIFICATION_FACTOR_IPAD;
+	}else{
+		_fFactor = MAGNIFICATION_FACTOR_IPHONE;
+	}
+	frame.origin.x = (int)(frame.origin.x * _fFactor);
+	frame.origin.y = (int)(frame.origin.y * _fFactor);
+	frame.size.width = (int)(frame.size.width * _fFactor);
+	frame.size.height = (int)(frame.size.height * _fFactor);
+	self.contentScaleFactor = [UIScreen mainScreen].scale;
+    NSLog(@"%f", self.contentScaleFactor);
+	return self;
 }
 
 //initialize is called automatically before the class gets any other message, per from http://stackoverflow.com/questions/145154/what-does-your-objective-c-singleton-look-like
@@ -74,7 +86,7 @@ CGSize					_size;
 	//todo: this was originally done in bindToState, since that is where we would get sizing information.  But I
 	//couldn't get it to work right when switching between states; I think it messed up the camera.  So it's here
 	//for now.  -joe
-	newSize = CGSizeMake(320, 480) ;//[eaglLayer bounds].size; 
+	newSize = CGSizeMake(640, 960) ;//[eaglLayer bounds].size; 
 	newSize.width = roundf(newSize.width);
 	newSize.height = roundf(newSize.height);
 	
@@ -88,6 +100,20 @@ CGSize					_size;
 	glMatrixMode(GL_PROJECTION);
 	glOrthof(0, _size.width, 0, _size.height, -1, 1);
 	glMatrixMode(GL_MODELVIEW);
+	
+	if( [GameStateManager isPad] )
+	{
+		_fFactor = MAGNIFICATION_FACTOR_IPAD;
+	}
+	else
+	{
+		_fFactor = MAGNIFICATION_FACTOR_IPHONE;
+	}
+	
+	//Set up OpenGL projection matrix
+	glMatrixMode(GL_PROJECTION);
+	glOrthof(0, _size.width * _fFactor, 0, _size.height * _fFactor, -1, 1);
+	glMatrixMode(GL_MODELVIEW);	
 }
 
 //Set our opengl context's output to the underlying gl layer of this gamestate.

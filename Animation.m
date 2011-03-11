@@ -74,11 +74,12 @@
 		}
 		[_animationTimer reset];
 	}
-	self.area = CGRectMake(_size.width*_currentFrame, _size.height*_index, 
-					   _size.width, _size.height);
+	[super update];
 }
 
 - (void)draw{
+	self.area = CGRectMake(_size.width*_currentFrame, _size.height*_index, 
+						   _size.width, _size.height);
 	[super draw];
 }
 

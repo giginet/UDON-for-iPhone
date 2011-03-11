@@ -14,9 +14,7 @@
 +(CGPoint)toLeftBottom:(CGPoint)point;
 +(CGPoint)toRightBottom:(CGPoint)point;
 
-+(CGPoint)toLeftBottomWithSprite:(CGPoint)sprite;
-+(CGPoint)toRightBottomWithSprite:(CGPoint)sprite;
-
-
++(CGPoint)fromLeftBottom:(CGPoint)point;
++(CGPoint)fromRightBottom:(CGPoint)point;
 
 @end

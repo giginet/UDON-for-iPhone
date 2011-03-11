@@ -31,7 +31,8 @@
 @property(getter=isReverse, setter=enableReverse) BOOL reverse;
 @property(getter=isLooping, setter=enableLooping) BOOL looping;
 @property(readonly) BOOL isActive;
-@property(readonly) int maxFrame, currentFrame;
+@property(readonly) int maxFrame; 
+@property(readwrite) int currentFrame;
 @property(readwrite) int index;
 
 @end

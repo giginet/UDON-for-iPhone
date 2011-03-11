@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "GameState.h"
+#define MAGNIFICATION_FACTOR_IPAD (0.5)
+#define MAGNIFICATION_FACTOR_IPHONE (1)
 
 @interface GLESGameState : GameState {
 

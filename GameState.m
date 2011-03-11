@@ -9,7 +9,7 @@
 #import "GameState.h"
 
 @implementation GameState
-@synthesize sprites=_sprites;
+//@synthesize sprites=_sprites;
 
 - (id) initWithFrame: (CGRect)frame andManager: (GameStateManager*)pManager{
 	if(self = [super initWithFrame:frame]){
@@ -36,9 +36,10 @@
 - (void) ready{
 }
 
-- (void) finalize{
-	[super finalize];
+- (void) clean{
 	[_sprites removeAllObjects];
+	[g_ResManager purgeTextures];
+	[g_ResManager purgeSounds];
 }
 
 - (void)drawRect:(CGRect)rect{

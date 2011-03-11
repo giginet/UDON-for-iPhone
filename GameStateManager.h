@@ -13,5 +13,6 @@
 @interface GameStateManager : NSObject {
 }
 - (void) doStateChange: (Class) state;
++ (BOOL)isPad;
 
 @end

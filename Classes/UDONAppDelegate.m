@@ -8,6 +8,7 @@
 
 #import "UDONAppDelegate.h"
 #import "UDONViewController.h"
+#import <QuartzCore/CAAnimation.h>
 
 @implementation UDONAppDelegate
 
@@ -50,18 +51,35 @@
 }
 
 - (void) doStateChange: (Class) state {
-	if( viewController.view != nil){
+	UIView* oldView = viewController.view;
+	
+	/*viewController.view = [[state alloc]
+						   initWithFrame:CGRectMake(0,0,320.0,480.0)
+						   andManager:self];*/
+	
+	CATransition *transition = [CATransition animation];
+	transition.timingFunction = UIViewAnimationCurveEaseInOut;
+	transition.type = kCATransitionReveal;
+	transition.duration = 1;
+	//for iPhone4
+	GLint iWidth = [UIScreen mainScreen].bounds.size.width;
+    GLint iHeight = [UIScreen mainScreen].bounds.size.height;
+	
+	viewController.view = [[state alloc]  initWithFrame:CGRectMake(0, 0, iWidth, iHeight) andManager:self];
+	viewController.view.contentScaleFactor = [UIScreen mainScreen].scale;
+	
+	[viewController.view.layer addAnimation:transition forKey:nil];
+	[viewController.view insertSubview:oldView atIndex:0];
+	[window addSubview:viewController.view];
+	
+	
+	[window makeKeyAndVisible];
+	if( oldView != nil){
 		//ウィンドウから既存の画面を削除
-		[viewController.view removeFromSuperview];
-		[viewController.view release];
+		[oldView removeFromSuperview];
+		[oldView release];
 	}
 	
-	viewController.view = [[state alloc]
-						   initWithFrame:CGRectMake(0,0,320.0,480.0)
-						   andManager:self];
-	
-	[window addSubview:viewController.view];
-	[window makeKeyAndVisible];
 }
 
 /*

@@ -13,7 +13,11 @@
 
 @interface Prefecture : Character {
 	int _number;
+	CGRect _mogArea;
 }
 - (id)initWithNumber:(NSInteger)n;
+- (CGRect)calcHitArea:(NSInteger)n;
+
+- (CGRect)mogArea;
 
 @end
