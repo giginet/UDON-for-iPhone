@@ -81,16 +81,19 @@ float _fFactor;
 	
 	CGSize					newSize;
 	
-    GLint iWidth = [UIScreen mainScreen].bounds.size.width;
-    GLint iHeight = [UIScreen mainScreen].bounds.size.height;
+	float scale = [[UIScreen mainScreen] scale];
 	
+    GLint iWidth = [UIScreen mainScreen].bounds.size.width * scale;
+    GLint iHeight = [UIScreen mainScreen].bounds.size.height * scale;
 	//todo: this was originally done in bindToState, since that is where we would get sizing information.  But I
 	//couldn't get it to work right when switching between states; I think it messed up the camera.  So it's here
 	//for now.  -joe
 	newSize = CGSizeMake(iWidth, iHeight) ;//[eaglLayer bounds].size; 
 	newSize.width = roundf(newSize.width);
 	newSize.height = roundf(newSize.height);
+	BOOL isiPn4 = iWidth == 640;
 	
+	NSLog(@"どういうことなの・・・");
 	NSLog(@"dimension %f x %f", newSize.width, newSize.height);
 	
 	_size = newSize;
@@ -98,7 +101,7 @@ float _fFactor;
 	glScissor(0, 0, newSize.width, newSize.height);
 	
 	
-	if( [GameStateManager isPad] )
+	if( [GameStateManager isPad] || isiPn4)
 	{
 		_fFactor = MAGNIFICATION_FACTOR_IPAD;
 	}

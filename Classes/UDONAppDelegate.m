@@ -70,6 +70,7 @@
 	
 	[viewController.view.layer addAnimation:transition forKey:nil];
 	[viewController.view insertSubview:oldView atIndex:0];
+	viewController.view.contentScaleFactor = [[UIScreen mainScreen] scale];
 	[window addSubview:viewController.view];
 	
 	

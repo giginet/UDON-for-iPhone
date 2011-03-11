@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>07C423F51329C4AA00EA2ABF</string>
+						<string>07C424551329C89500EA2ABF</string>
 						<key>history</key>
 						<array>
 							<string>0758C4AF1329C1BC00CACEFE</string>
@@ -322,14 +322,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
-									<integer>3</integer>
+									<integer>16</integer>
+									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 37}, {172, 940}}</string>
+							<string>{{0, 40}, {172, 940}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -364,7 +364,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GLESGameState.m</string>
+								<string>UDONAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -372,11 +372,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GLESGameState.m</string>
+										<string>UDONAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>07C423EF1329C4AA00EA2ABF</string>
+										<string>07C424521329C89500EA2ABF</string>
 										<key>history</key>
 										<array>
 											<string>07DB0B1313225E6700629857</string>
@@ -386,8 +386,6 @@
 											<string>07DB0BDD1322891100629857</string>
 											<string>07DB0BDE1322891100629857</string>
 											<string>070EFC061326BD210005F73D</string>
-											<string>070EFC841326C2900005F73D</string>
-											<string>070EFC851326C2900005F73D</string>
 											<string>070EFE0F1326D5800005F73D</string>
 											<string>070EFEE61326E01D0005F73D</string>
 											<string>070EFEED1326E01D0005F73D</string>
@@ -401,12 +399,7 @@
 											<string>070E0253132842FE0005F73D</string>
 											<string>070E02681328A1080005F73D</string>
 											<string>0758C3911329B90C00CACEFE</string>
-											<string>0758C3931329B90C00CACEFE</string>
 											<string>0758C3941329B90C00CACEFE</string>
-											<string>0758C3951329B90C00CACEFE</string>
-											<string>0758C3961329B90C00CACEFE</string>
-											<string>0758C3971329B90C00CACEFE</string>
-											<string>0758C3981329B90C00CACEFE</string>
 											<string>0758C3991329B90C00CACEFE</string>
 											<string>0758C39A1329B90C00CACEFE</string>
 											<string>0758C39B1329B90C00CACEFE</string>
@@ -427,16 +420,23 @@
 											<string>0758C3AA1329B90C00CACEFE</string>
 											<string>0758C3AB1329B90C00CACEFE</string>
 											<string>0758C3AC1329B90C00CACEFE</string>
-											<string>0758C3AD1329B90C00CACEFE</string>
-											<string>0758C3AE1329B90C00CACEFE</string>
-											<string>0758C3AF1329B90C00CACEFE</string>
-											<string>0758C3B01329B90C00CACEFE</string>
-											<string>0758C3B11329B90C00CACEFE</string>
 											<string>0758C3B31329B90C00CACEFE</string>
 											<string>0758C3B41329B90C00CACEFE</string>
-											<string>0758C4051329BA4F00CACEFE</string>
 											<string>0758C47C1329C11A00CACEFE</string>
-											<string>0758C4AC1329C1BC00CACEFE</string>
+											<string>07C423F91329C63600EA2ABF</string>
+											<string>07C423FA1329C63600EA2ABF</string>
+											<string>07C423FB1329C63600EA2ABF</string>
+											<string>07C423FC1329C63600EA2ABF</string>
+											<string>07C423FD1329C63600EA2ABF</string>
+											<string>07C423FE1329C63600EA2ABF</string>
+											<string>07C423FF1329C63600EA2ABF</string>
+											<string>07C424001329C63600EA2ABF</string>
+											<string>07C424011329C63600EA2ABF</string>
+											<string>07C424021329C63600EA2ABF</string>
+											<string>07C424031329C63600EA2ABF</string>
+											<string>07C4242F1329C7A500EA2ABF</string>
+											<string>07C424301329C7A500EA2ABF</string>
+											<string>07C424311329C7A500EA2ABF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -465,7 +465,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameState.m</string>
+								<string>GLTexture.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -473,11 +473,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameState.m</string>
+										<string>GLTexture.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>07C423F31329C4AA00EA2ABF</string>
+										<string>07C424531329C89500EA2ABF</string>
 										<key>history</key>
 										<array>
 											<string>07DB0BCC1322891100629857</string>
@@ -496,7 +496,6 @@
 											<string>070E016913283BAF0005F73D</string>
 											<string>070E017313283BAF0005F73D</string>
 											<string>070E017413283BAF0005F73D</string>
-											<string>070E021713283EBE0005F73D</string>
 											<string>070E022213283F260005F73D</string>
 											<string>070E028B1328AA010005F73D</string>
 											<string>070E03341328BD950005F73D</string>
@@ -507,9 +506,7 @@
 											<string>0758C3BB1329B90C00CACEFE</string>
 											<string>0758C3BC1329B90C00CACEFE</string>
 											<string>0758C3BD1329B90C00CACEFE</string>
-											<string>0758C3BE1329B90C00CACEFE</string>
 											<string>0758C3BF1329B90C00CACEFE</string>
-											<string>0758C3C01329B90C00CACEFE</string>
 											<string>0758C3C11329B90C00CACEFE</string>
 											<string>0758C3C21329B90C00CACEFE</string>
 											<string>0758C3C31329B90C00CACEFE</string>
@@ -540,11 +537,14 @@
 											<string>07C423B31329C38400EA2ABF</string>
 											<string>07C423C51329C3BC00EA2ABF</string>
 											<string>07C423C61329C3BC00EA2ABF</string>
-											<string>07C423D01329C42400EA2ABF</string>
-											<string>07C423E61329C48700EA2ABF</string>
-											<string>07C423F01329C4AA00EA2ABF</string>
 											<string>07C423F11329C4AA00EA2ABF</string>
-											<string>07C423F21329C4AA00EA2ABF</string>
+											<string>07C424061329C63600EA2ABF</string>
+											<string>07C4240F1329C67400EA2ABF</string>
+											<string>07C424111329C67400EA2ABF</string>
+											<string>07C424481329C86A00EA2ABF</string>
+											<string>07C424491329C86A00EA2ABF</string>
+											<string>07C4244A1329C86A00EA2ABF</string>
+											<string>07C4244B1329C86A00EA2ABF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -571,7 +571,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameStateManager.h</string>
+								<string>GLTexture.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -579,11 +579,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameStateManager.h</string>
+										<string>GLTexture.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>07C423F41329C4AA00EA2ABF</string>
+										<string>07C424541329C89500EA2ABF</string>
 										<key>history</key>
 										<array>
 											<string>07DB0BCC1322891100629857</string>
@@ -594,7 +594,6 @@
 											<string>070EFD291326C8720005F73D</string>
 											<string>070EFD2B1326C8720005F73D</string>
 											<string>070EFD2E1326C8720005F73D</string>
-											<string>070EFD301326C8720005F73D</string>
 											<string>070EFD321326C8720005F73D</string>
 											<string>070EFDA71326CFE80005F73D</string>
 											<string>070EFDB41326D0B10005F73D</string>
@@ -643,7 +642,8 @@
 											<string>07C423B91329C38400EA2ABF</string>
 											<string>07C423BA1329C38400EA2ABF</string>
 											<string>07C423BB1329C38400EA2ABF</string>
-											<string>07C423BC1329C38400EA2ABF</string>
+											<string>07C424141329C67400EA2ABF</string>
+											<string>07C424151329C67400EA2ABF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -845,13 +845,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>07C423F61329C4AA00EA2ABF</string>
+		<string>07C424561329C89500EA2ABF</string>
 		<string>07C423C01329C38400EA2ABF</string>
 		<string>07C423A71329C2E400EA2ABF</string>
 		<string>0713DF8D1322450F00AEF360</string>
 		<string>0758C3E31329B90C00CACEFE</string>
-		<string>/Users/giginet/Develop/iPhone/UDON/UDON.xcodeproj</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/giginet/Develop/iPhone/UDON/UDON.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
