@@ -22,6 +22,8 @@ int gScore;
 	[_bg2 changeDirection:@"left"];
 	[g_ResManager playMusic:@"main.mp3"];
 	gScore = 0;
+	
+	
 }
 
 - (void)update{

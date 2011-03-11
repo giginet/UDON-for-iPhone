@@ -282,11 +282,11 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 		width / 2.0f,	height / 2.0f,	0.0 
 	};
 	
-	glColor4f(0, 0, 1, 0.5);
+	
 	glBindTexture(GL_TEXTURE_2D, _name);
 	glVertexPointer(3, GL_FLOAT, 0, vertices);
 	glTexCoordPointer(2, GL_FLOAT, 0, coordinates);
-	
+
 	glPushMatrix();
 	glTranslatef(point.x, point.y, 0);
 	glRotatef(rotation, 0, 0, 1); //in degrees, about screen origin.
@@ -314,6 +314,8 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 		-dest.size.width/2,		dest.size.height/2,		0.0,
 		dest.size.width/2,		dest.size.height/2,		0.0 
 	};
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	
 	glBindTexture(GL_TEXTURE_2D, _name);
 	glVertexPointer(3, GL_FLOAT, 0, vertices);
@@ -324,6 +326,8 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 	glRotatef(rotation, 0, 0, 1); //in degrees, about screen origin.
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	glPopMatrix();
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 }
 
 - (void) drawInRect:(CGRect)rect

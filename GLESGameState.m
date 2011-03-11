@@ -11,6 +11,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ResourceManager.h"
 
+//for endgame/progression code.
+#import "ResourceManager.h" //for getting savefile
+
 //primary context for all opengl calls.  Set in setup2D, should be cleared in teardown.
 EAGLContext* gles_context;
 
@@ -32,18 +35,13 @@ float _fFactor;
     if (self = [super initWithFrame:frame andManager:pManager]) {
         // Initialization code
 		[self bindLayer];
+		endgame_state = 0;
+		endgame_complete_time = 0.0f;
     }
-	if([GameStateManager isPad]){
-		_fFactor = MAGNIFICATION_FACTOR_IPAD;
-	}else{
-		_fFactor = MAGNIFICATION_FACTOR_IPHONE;
-	}
-	frame.origin.x = (int)(frame.origin.x * _fFactor);
-	frame.origin.y = (int)(frame.origin.y * _fFactor);
-	frame.size.width = (int)(frame.size.width * _fFactor);
-	frame.size.height = (int)(frame.size.height * _fFactor);
-	self.contentScaleFactor = [UIScreen mainScreen].scale;
-    NSLog(@"%f", self.contentScaleFactor);
+
+	//to account with ScreenRotate
+	self.contentMode = UIViewContentModeScaleAspectFit;
+    
 	return self;
 }
 
@@ -83,10 +81,13 @@ float _fFactor;
 	
 	CGSize					newSize;
 	
+    GLint iWidth = [UIScreen mainScreen].bounds.size.width;
+    GLint iHeight = [UIScreen mainScreen].bounds.size.height;
+	
 	//todo: this was originally done in bindToState, since that is where we would get sizing information.  But I
 	//couldn't get it to work right when switching between states; I think it messed up the camera.  So it's here
 	//for now.  -joe
-	newSize = CGSizeMake(640, 960) ;//[eaglLayer bounds].size; 
+	newSize = CGSizeMake(iWidth, iHeight) ;//[eaglLayer bounds].size; 
 	newSize.width = roundf(newSize.width);
 	newSize.height = roundf(newSize.height);
 	
@@ -96,10 +97,6 @@ float _fFactor;
 	glViewport(0, 0, newSize.width, newSize.height);
 	glScissor(0, 0, newSize.width, newSize.height);
 	
-	//Set up OpenGL projection matrix
-	glMatrixMode(GL_PROJECTION);
-	glOrthof(0, _size.width, 0, _size.height, -1, 1);
-	glMatrixMode(GL_MODELVIEW);
 	
 	if( [GameStateManager isPad] )
 	{
@@ -109,11 +106,11 @@ float _fFactor;
 	{
 		_fFactor = MAGNIFICATION_FACTOR_IPHONE;
 	}
-	
+
 	//Set up OpenGL projection matrix
 	glMatrixMode(GL_PROJECTION);
 	glOrthof(0, _size.width * _fFactor, 0, _size.height * _fFactor, -1, 1);
-	glMatrixMode(GL_MODELVIEW);	
+	glMatrixMode(GL_MODELVIEW);
 }
 
 //Set our opengl context's output to the underlying gl layer of this gamestate.
@@ -121,7 +118,7 @@ float _fFactor;
 //Only the most recent caller will get opengl rendering.
 - (BOOL) bindLayer {
 	CAEAGLLayer*			eaglLayer = (CAEAGLLayer*)[self layer];
-	
+		
 	NSLog(@"layer %@", eaglLayer);
 	
 	//set up a few drawing properties.  App will run and display without this line, but the properties
@@ -131,6 +128,9 @@ float _fFactor;
 	if(![EAGLContext setCurrentContext:gles_context]) {
 		return NO;
 	}
+	
+	//Set background color when rotated
+	eaglLayer.backgroundColor = [[UIColor blackColor] CGColor];
 	
 	//disconnect any existing render storage.  Has no effect if there is no existing storage.
 	//I have no idea if this leaks.  I'm pretty sure that this class shouldn't be responsible for
@@ -181,6 +181,10 @@ float _fFactor;
 -(void) draw{
 	glClearColor(0x00/256.0f, 0x00/256.0f, 0x00/256.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
+}
+
+- (void)clean{
+	[super clean];
 }
 
 @end

@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "GameState.h"
+
 #define MAGNIFICATION_FACTOR_IPAD (0.5)
 #define MAGNIFICATION_FACTOR_IPHONE (1)
 
 @interface GLESGameState : GameState {
-
+	int endgame_state;
+@private
+	float endgame_complete_time;
 }
 
 - (void) startDraw;
@@ -21,5 +24,6 @@
 + (void) setup2D;
 
 -(id) initWithFrame:(CGRect)frame andManager:(GameStateManager*)pManager;
+
 
 @end
