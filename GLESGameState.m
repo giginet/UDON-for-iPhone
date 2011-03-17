@@ -93,20 +93,15 @@ float _fFactor;
 	newSize.height = roundf(newSize.height);
 	BOOL isiPn4 = iWidth == 640;
 	
-	NSLog(@"どういうことなの・・・");
-	NSLog(@"dimension %f x %f", newSize.width, newSize.height);
-	
 	_size = newSize;
 	glViewport(0, 0, newSize.width, newSize.height);
 	glScissor(0, 0, newSize.width, newSize.height);
 	
 	
-	if( [GameStateManager isPad] || isiPn4)
-	{
+	if( [GameStateManager isPad] || isiPn4){
 		_fFactor = MAGNIFICATION_FACTOR_IPAD;
 	}
-	else
-	{
+	else{
 		_fFactor = MAGNIFICATION_FACTOR_IPHONE;
 	}
 
